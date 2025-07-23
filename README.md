@@ -1,6 +1,7 @@
 # Chess-Elo-Guesser
 Data analysis of close to 30,000 chess games and model development to predict average elo of chess players given pgn.
 
+The data was sourced from kaggle and can be found throguh the following link https://www.kaggle.com/datasets/adityajha1504/chesscom-user-games-60000-games. 
 Started by using simple features such as blunders per game_lenth (eg per move). Used stockfish to evaluate the rating of each position and hence understand various features such as the average eval change per move and the variance in the eval. Eg, eval change per move should be lower in higher rated oppponents udue to making more "best moves". Added more features later on such as number of major piece moves in the first ten moves, wheter bishop pair was maintained, number of legal moves etc. For example, the position tends to get "locked" in higher rated games leading to a lower number of possible legal moves. Graphing the different types of moves (mistakes, blunders, normal) by elo showed that 2500+ rated players made more mistakes than 2300+ players. This however, is attributed to only a depth of 8 being used for stockfish, meaning higher rated players would have likely played move that stockfish at depth 8 didnt understand.
 
 The task was seperated into two methods, one to determine the average elo of a player given the other players rating and a combined average without any prior information on either of the players elo.
